@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.example.grpcinterface.lib";
+option java_outer_classname = "interfaceProto";
+
+service RequirementAccountService {
+  rpc getPhone (AccountIdReq) returns (PhoneResp) {
+  }
+}
+
+message AccountIdReq {
+  string accountId = 1;
+}
+
+message PhoneResp {
+  string phone = 1;
+}
